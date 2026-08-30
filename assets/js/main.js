@@ -36,22 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ============================================================
-     2. OVERLAY DENTRO DO VÍDEO (Continuar Assistindo)
-     ============================================================ */
-  const btnContinue = document.getElementById('btnContinueWatch');
-  const videoOverlay = document.getElementById('videoOverlayUrgent');
 
-  if (btnContinue && videoOverlay) {
-    btnContinue.addEventListener('click', (e) => {
-      e.stopPropagation();
-      videoOverlay.style.opacity = '0';
-      videoOverlay.style.pointerEvents = 'none';
-      setTimeout(() => {
-        videoOverlay.style.display = 'none';
-      }, 300);
-    });
-  }
 
   /* ============================================================
      3. FAQ ACCORDION INTERATIVO
