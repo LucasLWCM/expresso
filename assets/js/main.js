@@ -61,7 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ============================================================
-     4. ROLAGEM SUAVE PARA O CHECKOUT
+     4. DEPOIMENTO EM VÍDEO (YouTube Shorts)
+     ============================================================ */
+  const caseVideoPlayer = document.getElementById('caseVideoPlayer');
+  if (caseVideoPlayer) {
+    caseVideoPlayer.addEventListener('click', function () {
+      const videoId = this.getAttribute('data-video-id') || 'RR1dGZ9IXrI';
+      this.innerHTML = `
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1&modestbranding=1" 
+          title="Depoimento da Aluna Terapeuta" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      `;
+      this.style.cursor = 'default';
+    });
+  }
+
+  /* ============================================================
+     5. ROLAGEM SUAVE PARA O CHECKOUT
      ============================================================ */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
