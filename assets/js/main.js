@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const forceHide = urlParams.get('vsl') === 'delay';
 
   const body = document.body;
-  const testBar = document.getElementById('vslTestBar');
-  const toggleBtn = document.getElementById('btnToggleVsl');
-
-  // Inicializa o estado do delay
+  // Ocultar elementos se houver delay ou parâmetro de vsl
   if ((VSL_DELAY_SECONDS > 0 || forceHide) && !forceShow) {
     body.classList.add('vsl-delay-active');
     
@@ -22,18 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (VSL_DELAY_SECONDS > 0) {
       setTimeout(() => {
         body.classList.remove('vsl-delay-active');
-        if (toggleBtn) toggleBtn.textContent = 'Ocultar Pitch';
       }, VSL_DELAY_SECONDS * 1000);
     }
-  }
-
-  // Botão flutuante para você testar a visualização da VSL em 1 clique
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('vsl-delay-active');
-      const isHidden = body.classList.contains('vsl-delay-active');
-      toggleBtn.textContent = isHidden ? 'Exibir Tudo' : 'Ocultar Pitch';
-    });
   }
 
 
