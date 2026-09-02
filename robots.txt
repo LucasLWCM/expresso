@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aula.rafaelbarbosaoficial.com.br/sitemap.xml
