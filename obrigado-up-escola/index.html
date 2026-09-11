@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigado - Mais um Passo | Rafa Barbosa</title>
+  
+  <!-- Vturb SmartPlayer Otimização -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/19dc667c-0349-4677-a9f7-b752a5ae9432/players/6aa40598ebdb035c290c820e/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/19dc667c-0349-4677-a9f7-b752a5ae9432/6aa4057a675d014cc4126dc3/main.m3u8" as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+
+  <!-- Preloads essenciais apenas -->
+  <link rel="preload" href="../assets/css/style.css" as="style">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap">
+
+  <style>
+    /* Estilos Exclusivos da Página de Upsell */
+    .upsell-topbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--bg-main);
+      z-index: 1000;
+      border-bottom: 2px solid var(--alert-red-dark);
+      padding-bottom: 10px;
+    }
+    
+    .upsell-progress-container {
+      width: 100%;
+      background-color: #322316; /* var(--bg-card-border) */
+      height: 12px;
+      margin-bottom: 12px;
+    }
+    
+    .upsell-progress-bar {
+      height: 100%;
+      width: 80%;
+      background: linear-gradient(90deg, #ef4444, #dc2626);
+      transition: width 1s ease-in-out;
+      border-radius: 0 4px 4px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 8px;
+      font-weight: bold;
+    }
+    
+    .upsell-alert-text {
+      text-align: center;
+      color: var(--alert-red);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 10px;
+    }
+
+    .upsell-alert-text svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--alert-red);
+    }
+    
+    /* Checklist Customizada */
+    .upsell-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    .upsell-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: #e5e7eb;
+    }
+    
+    .upsell-checklist li svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      fill: var(--cta-green);
+      margin-top: 2px;
+    }
+    
+    .upsell-checklist li strong {
+      display: block;
+      color: white;
+      font-size: 16px;
+    }
+    
+    /* Bloco Oferta Menor Padding */
+    .section-oferta-upsell {
+      padding: 20px 18px;
+    }
+
+    .trust-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      opacity: 0.8;
+    }
+
+    .trust-icons img {
+      height: 35px;
+      object-fit: contain;
+    }
+
+    /* Garantia simplificada */
+    .guarantee-box {
+      border: 1px dashed rgba(226, 168, 86, 0.4);
+      background: rgba(226, 168, 86, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .guarantee-box img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    .guarantee-box h4 {
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+    .guarantee-box p {
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-container" style="min-height: auto;">
+    
+    <!-- BARRA DO TOPO -->
+    <div class="upsell-topbar" id="topbar">
+      <div class="upsell-progress-container">
+        <div class="upsell-progress-bar" id="progressBar">80%</div>
+      </div>
+      <div class="upsell-alert-text" id="alertText">
+        <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 16h-2v-2h2v2zm0-4h-2v-5h2v5z"/></svg>
+        Espere, sua compra não está completa
+      </div>
+    </div>
+
+    <!-- HEADLINE -->
+    <header class="section-hero">
+      <h1 class="hero-headline">
+        Como Manter o Botão do Propósito Ligado — <span class="highlight">Com Acompanhamento Semanal do Rafa</span>
+      </h1>
+      <p class="hero-subline" style="margin-top: 8px; color: var(--gold-light); font-weight: 600;">
+        Assista ao vídeo abaixo antes de sair.
+      </p>
+    </header>
+
+    <!-- VÍDEO -->
+    <section class="section-video">
+      <div class="video-wrapper" id="vslPlayer" style="aspect-ratio: 9/16; width: 100%; max-width: 400px; margin: 0 auto; border-radius: 12px; overflow: hidden;">
+        <vturb-smartplayer id="vid-6aa40598ebdb035c290c820e" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> 
+        <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/19dc667c-0349-4677-a9f7-b752a5ae9432/players/6aa40598ebdb035c290c820e/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+      </div>
+    </section>
+
+    <!-- BLOCO DE OFERTA (Oculto inicialmente) -->
+    <div id="ofertaContainer" class="esconder">
+      <section class="section-oferta-upsell">
+        <h2 style="font-size: 20px; text-align: center; margin-bottom: 25px; color: #fff;">
+          O QUE VOCÊ VAI RECEBER:
+        </h2>
+        
+        <ul class="upsell-checklist">
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Acesso a todo o acervo de conteúdo do Rafa</strong>
+              Acesso irrestrito a todos os materiais, aulas e exercícios.
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Leitura guiada "Para Ler e Viver — Marco Aurélio"</strong>
+              Acompanhamento detalhado da principal obra estoica.
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Gravações de todas as aulas já realizadas da Escola</strong>
+              Todo o histórico de encontros passados para maratonar.
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Aula ao vivo semanal com o Rafa</strong>
+              Encontros novos toda semana para tirar dúvidas e aprofundar.
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Grupo de WhatsApp com contato direto</strong>
+              Comunidade engajada e acompanhamento próximo.
+            </div>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <div>
+              <strong>Todo conteúdo novo lançado durante o ano de acesso</strong>
+              Sem cobranças adicionais por novos materiais.
+            </div>
+          </li>
+        </ul>
+
+        <div class="checkout-box" style="margin-top: 30px;">
+          <div class="price-de">De: <s>R$997</s> Por apenas:</div>
+          <div class="price-big">12x de <span>R$42,00</span></div>
+          <p style="text-align: center; margin-top: -5px; margin-bottom: 20px; font-size: 14px;">Ou R$397 à vista</p>
+          
+          <!-- HOTMART - Sales Funnel Widget -->
+          <!--- sales funnel container --->
+          <div id="hotmart-sales-funnel"></div>
+
+          <!--- script load and setup --->
+          <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+          <script>
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+          </script>
+          <!-- HOTMART - Sales Funnel Widget -->
+          
+          <!-- Ícones de segurança genéricos -->
+          <div class="trust-icons">
+            <svg xmlns="http://www.w3.org/w3.org/2000/svg" width="150" height="35" viewBox="0 0 200 40">
+              <text x="10" y="25" fill="#a3a3a3" font-family="sans-serif" font-size="14">🔒 Pagamento 100% Seguro</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="guarantee-box">
+          <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24" style="width: 40px; fill: var(--gold-primary); margin-bottom: 10px;">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+          </svg>
+          <h4>Garantia Incondicional de 7 Dias</h4>
+          <p>
+            Você pode experimentar a Escola Natureza Filosófica sem riscos. 
+            Se não gostar do conteúdo, do formato ou achar que não é para você, 
+            devolvemos 100% do seu investimento, sem burocracia.
+          </p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>Todos os direitos reservados. Rafa Barbosa - Filósofo, Professor e Fundador da Comunidade Sementes Matinais.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Lógica da Topbar atrelada à remoção da classe 'esconder' pelo Vturb
+    document.addEventListener('DOMContentLoaded', () => {
+      const ofertaContainer = document.getElementById('ofertaContainer');
+      const progressBar = document.getElementById('progressBar');
+      const alertText = document.getElementById('alertText');
+      const topbar = document.getElementById('topbar');
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      const forceShow = urlParams.get('preview') === 'all';
+      
+      const showTopBarSuccess = () => {
+        progressBar.style.width = '100%';
+        progressBar.innerText = '100%';
+        progressBar.style.background = 'linear-gradient(90deg, #10b981, #059669)';
+        alertText.innerHTML = `
+          <svg xmlns="http://www.w3.org/w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #10b981;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Agora você pode continuar
+        `;
+        alertText.style.color = '#10b981';
+        topbar.style.borderBottomColor = '#10b981';
+      };
+
+      if (forceShow) {
+        ofertaContainer.classList.remove('esconder');
+        ofertaContainer.style.display = 'block';
+        showTopBarSuccess();
+      } else {
+        // Inicialmente certificar que o display está none (o CSS principal pode não estar carregando rápido o suficiente ou o Vturb cuidar disso)
+        ofertaContainer.style.display = 'none';
+
+        // Observar a classe 'esconder'. O Vturb Smartplayer a remove no tempo do pitch.
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class' || mutation.attributeName === 'style') {
+              const isHidden = ofertaContainer.classList.contains('esconder');
+              if (!isHidden) {
+                // A classe esconder foi removida pelo Vturb
+                ofertaContainer.style.display = 'block';
+                showTopBarSuccess();
+                // Parar de observar após revelar
+                observer.disconnect();
+              }
+            }
+          });
+        });
+        observer.observe(ofertaContainer, { attributes: true, attributeFilter: ['class', 'style'] });
+      }
+    });
+  </script>
+</body>
+</html>
